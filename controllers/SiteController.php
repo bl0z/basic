@@ -123,7 +123,7 @@ class SiteController extends Controller
 //        return $this->render('about');
         try {
             $info = json_decode(base64_decode($get));
-            echo $info->apellidos;
+            echo $info->apellidos . " development";
         }catch(\yii\base\ErrorException $e){
             return $this->render('error', array("name"=>"Invalid JSON","message"=>"Invalid JSON"));
         }
