@@ -86,12 +86,5 @@ class <?= $className ?> extends <?= '\\' . ltrim($generator->baseClass, '\\') . 
     }
 <?php endif; ?>
 
-    /**
-     * @inheritdoc
-     */
-<?php foreach ($tableSchema->columns as $column): ?>
-    public function get<?= ucfirst(strtolower($column->name)) ?>() {
-        return $this-><?= $column->name ?>;
-    }
-<?php endforeach; ?>
+
 }
