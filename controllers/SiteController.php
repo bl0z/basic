@@ -60,7 +60,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        //return $this->render('index');
     }
 
     /**
@@ -125,7 +125,7 @@ class SiteController extends Controller
             $info = json_decode(base64_decode($get));
             echo $info->apellidos;
         }catch(\yii\base\ErrorException $e){
-            return $this->render('error', array("name"=>"Invalid JSON","message"=>"Invalid JSON"));
+            echo "error";
         }
     }
 }
